@@ -25,51 +25,7 @@
                 el: '#app',
                 data() {
                     return {
-                        msg: `
-#!/bin/bash
-read -p "Pleas input your birthday (MMDD, ex> 0709):"bir
-now='date +%m%d'
-if[ "$bir" == "$now" ]; then
-echo "Happy Birthday to you!!!"
-elif [ "$bir" -gt "$now" ]; then
-year='date +%Y'
-total_d=$(($(( date --date="$year$bir" +%s'-'date +%s' ))/60/60/24))
-echo "Your birthday will be $total_d later"
-else
-year= $(('date +%Y'+1))
-total_ d=$(($(('date --date="$year$bir" +%s'-'date +%s' ))/60/60/24))
-echo "Your birthday will be $total_d later"
-
-
-#!/bin/bash
-if [ ! -e logical ]; then
-touch logical
-echo "Just make a file logical"
-exit 1
-elif [ -e logical ] && [ -f logical ]; then
-rm logical
-mkdir logical
-echo "remove file ==> logical"
-echo "and make directory logical"
-exit 1
-elif [ -e logical ] && [ -d logical ]; then
-rm -rf logical
-echo "remove directory ==> logical"
-exit 1
-else
-echo "Does here have anything?"
-fi
-
-
-#!/bin/bash
-a=\`cat /etc/passwd | cut -d ':' -f1\`
-s=0
-for i in $a
-do
-        s=$((s+1))
-        echo "The \${s} account is \${i}"
-done
-`
+                        msg: ``
                     }
                 },
                 methods: {
